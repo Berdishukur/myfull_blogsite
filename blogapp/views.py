@@ -5,12 +5,6 @@ from .forms import EmailPostForm, CommentForm
 from django.views.generic import ListView
 
 
-class PostListView(ListView):
-    queryset = Post.published.all()
-    context_object_name = 'posts'
-    paginate_by = 2
-    template_name = 'blog/post/list.html'
-
 
 
 def post_detail(request, year, month, day, slug):
